@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// 
+Route::get('/home', function(){
+    return view('home');
+});
+
+// 記事
+Route::group(['prefix' => 'article', 'as' => 'article.'], function(){
+    Route::get('test', function(){
+        return view('article.test');
+    })->name('test');
+});
