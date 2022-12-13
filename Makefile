@@ -1,3 +1,4 @@
+################
 # docker
 up:
 	./vendor/bin/sail up -d
@@ -24,7 +25,7 @@ mysql:
 route-list:
 	./vendor/bin/sail artisan route:list
 
-
+################
 # version確認
 node-v:
 	./vendor/bin/sail node --version
@@ -33,7 +34,17 @@ php-v:
 	./vendor/bin/sail php -v
 # install
 
+################
 # tailwind
 # 動作確認。viteがよくわからん
 # https://tailwindcss.com/docs/guides/laravel
-# ./vendor/bin/sail npm run dev
+
+
+# npm コマンド
+# 開発時
+npm_run_d:
+	./vendor/bin/sail npm run dev
+
+# 本番ビルド
+npm_build:
+	./vendor/bin/sail npm run build
